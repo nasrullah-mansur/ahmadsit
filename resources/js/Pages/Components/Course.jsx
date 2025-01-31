@@ -9,43 +9,43 @@ export default function Course() {
         {
             id: 1,
             title: "প্রফেশনাল ওয়েব ডেভেলপমেন্ট",
-            fee: 200,
-            duration: "6 মাস",
+            fee: 6500,
+            duration: "10 মাস",
             image: `${domain}/images/web-development.png`,
         },
         {
             id: 2,
             title: "প্রফেশনাল ওয়েব ডিজাইন",
-            fee: 200,
-            duration: "6 মাস",
+            fee: 6500,
+            duration: "10 মাস",
             image: `${domain}/images/web-design.png`,
         },
         {
             id: 3,
             title: "ডিজিটাল মার্কেটিং",
-            fee: 200,
-            duration: "6 মাস",
+            fee: 6500,
+            duration: "7 মাস",
             image: `${domain}/images/digital-marketing.png`,
         },
         {
             id: 4,
             title: "প্রফেশনাল ওয়েব অ্যানালিটিক্স",
-            fee: 200,
-            duration: "6 মাস",
+            fee: 6500,
+            duration: "7 মাস",
             image: `${domain}/images/web analytics.png`,
         },
         {
             id: 5,
             title: "প্রফেশনাল গ্রাফিক ডিজাইন",
-            fee: 200,
-            duration: "6 মাস",
+            fee: 6500,
+            duration: "7 মাস",
             image: `${domain}/images/graphic-design.png`,
         },
         {
             id: 6,
             title: "ভিডিও এডিটিং",
-            fee: 200,
-            duration: "6 মাস",
+            fee: 6500,
+            duration: "7 মাস",
             image: `${domain}/images/video-editing.png`,
         },
     ];
@@ -58,11 +58,10 @@ export default function Course() {
                         আমাদের জনপ্রিয় কোর্স সমূহ
                     </h2>
                     <p className="text-[#3D3D3D] mb-[50px] text-[18px]">
-                        Lorem Ipsum হল মুদ্রণ এবং টাইপসেটিং শিল্পের ডামি পাঠ্য।
-                        লোরেম ইপসাম 1500 এর দশক থেকে শিল্পের মানক ডামি টেক্সট
-                        হয়েছে, যখন একটি অজানা প্রিন্টার টাইপের একটি গ্যালি
-                        নিয়েছিল এবং একটি টাইপ নমুনা বই তৈরি করতে এটিকে
-                        স্ক্র্যাম্বল করেছিল। এটা আছে
+                        আপনার দক্ষতা উন্নত করতে আমরা দিচ্ছি বেশ কয়েকটি বিষয় এর
+                        উপর প্রফেশনাল ট্রেনিং। প্রতিটি কোর্স সাজানো হয়েছে
+                        হাতে-কলমে শেখার সুযোগ, বাস্তব প্রজেক্ট এবং অভিজ্ঞ
+                        মেন্টরদের গাইডলাইনের মাধ্যমে।
                     </p>
                 </div>
                 <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6 px-3 lg:px-0">

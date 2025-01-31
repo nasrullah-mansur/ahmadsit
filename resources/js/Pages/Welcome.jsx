@@ -7,10 +7,12 @@ import Facility from "./Components/Facility";
 import SuccessHistory from "./Components/SuccessHistory";
 import Solution from "./Components/Solution";
 import Contact from "./Components/Contact";
+import HeadSection from "./Components/HeadSection";
 
 export default function Welcome() {
     return (
         <GuestLayout>
+            <HeadSection />
             <Banner />
             <Counter />
             <Course />

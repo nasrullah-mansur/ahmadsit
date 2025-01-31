@@ -59,6 +59,7 @@ export default function SuccessHistory() {
         dots: false,
         infinite: true,
         speed: 500,
+        autoplay: true,
         slidesToShow: 3,
         slidesToScroll: 1,
         nextArrow: <NextArr />,

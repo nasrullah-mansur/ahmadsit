@@ -33,11 +33,11 @@ export default function Banner() {
                             </span>
                         </h1>
                         <p className="text-[#3D3D3D]">
-                            Lorem Ipsum হল মুদ্রণ এবং টাইপসেটিং শিল্পের ডামি
-                            পাঠ্য লোরেম ইপসাম 1500 এর দশক থেকে শিল্পের মানক ডামি
-                            টেক্সট হয়েছে, যখন একটি অজানা প্রিন্টার টাইপের একটি
-                            গ্যালি নিয়েছিল এবং একটি টাইপ নমুনা বই তৈরি করতে
-                            এটিকে স্ক্র্যাম্বল করেছিল।
+                            আহমাদ’স আইটি ইনিস্টিটিউট আপনার ক্যারিয়ার গড়ার
+                            নির্ভরযোগ্য ঠিকানা! আমরা শেখাই ওয়েব ডেভেলপমেন্ট,
+                            ডিজিটাল মার্কেটিং, গ্রাফিক ডিজাইন ও ভিডিও এডিটিং, যা
+                            আপনাকে দক্ষ করে তুলবে ফ্রিল্যান্সিং ও চাকরির বাজারে।
+                            আজই যোগ দিন এবং দক্ষতা অর্জন করুন!
                         </p>
                         <CourseBtn className="mt-6" />
                     </div>
@@ -54,8 +54,11 @@ export default function Banner() {
                                         src={`${domain}/images/banner-img.png`}
                                         alt="Ahmad's IT Institute"
                                     />
-                                    <div className="absolute top-1/2 left-1/2 w-[56px] h-[56px] rounded-full bg-white flex justify-center items-center -translate-x-1/2 -translate-y-1/2 outline outline-offset-2 outline-8 cursor-pointer outline-[#D7CDDB]">
-                                        <button onClick={() => setIsOpen(true)}>
+                                    <div
+                                        onClick={() => setIsOpen(true)}
+                                        className="absolute top-1/2 left-1/2 w-[56px] h-[56px] rounded-full bg-white flex justify-center items-center -translate-x-1/2 -translate-y-1/2 outline outline-offset-2 outline-8 cursor-pointer outline-[#D7CDDB]"
+                                    >
+                                        <button>
                                             <FaPlay />
                                         </button>
                                     </div>

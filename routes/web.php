@@ -1,18 +1,17 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
-use Illuminate\Foundation\Application;
-use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Foundation\Application;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\FrontEndController;
 
-Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
-});
+Route::get('/', [FrontEndController::class, 'index'])->name('home');
+Route::get('/about', [FrontEndController::class, 'about'])->name('about');
+Route::get('/contact', [FrontEndController::class, 'contact'])->name('contact');
+Route::get('/success', [FrontEndController::class, 'success'])->name('success');
+Route::get('/courses', [FrontEndController::class, 'courses'])->name('courses');
+Route::get('/courses/{slug}', [FrontEndController::class, 'courses_view'])->name('courses.view');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

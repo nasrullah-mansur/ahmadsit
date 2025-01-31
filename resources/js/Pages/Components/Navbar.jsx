@@ -21,25 +21,22 @@ export default function Navbar() {
                 </div>
                 <ul className="hidden lg:flex">
                     <li className="mx-2 p-1 transition-colors hover:text-primary">
-                        <Link>হোম</Link>
+                        <Link href={route("home")}>হোম</Link>
                     </li>
                     <li className="mx-2 p-1 transition-colors hover:text-primary">
-                        <Link>আমাদের সম্পর্কে</Link>
+                        <Link href={route("about")}>আমাদের সম্পর্কে</Link>
                     </li>
                     <li className="mx-2 p-1 transition-colors hover:text-primary">
-                        <Link>কোর্সসমূহ</Link>
+                        <Link href={route("courses")}>কোর্সসমূহ</Link>
                     </li>
                     <li className="mx-2 p-1 transition-colors hover:text-primary">
-                        <Link>সাফল্যের গল্প</Link>
-                    </li>
-                    <li className="mx-2 p-1 transition-colors hover:text-primary">
-                        <Link>যোগাযোগ</Link>
+                        <Link href={route("success")}>সাফল্যের গল্প</Link>
                     </li>
                 </ul>
                 <div className="flex">
                     <Link
                         className="bg-gradient-to-r from-purple-500 to-pink-500 font-semibold px-5 py-3 rounded ml-3 text-white"
-                        href="#"
+                        href={route("contact")}
                     >
                         যোগাযোগ
                     </Link>
@@ -83,9 +80,6 @@ export default function Navbar() {
                             </li>
                             <li className="mx-2 p-1 transition-colors hover:text-primary">
                                 <Link>সাফল্যের গল্প</Link>
-                            </li>
-                            <li className="mx-2 p-1 transition-colors hover:text-primary">
-                                <Link>যোগাযোগ</Link>
                             </li>
                         </ul>
                     </div>

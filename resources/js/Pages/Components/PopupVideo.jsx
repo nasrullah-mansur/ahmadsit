@@ -13,7 +13,7 @@ export default function PopupVideo({ isOpen }) {
                     ></iframe>
                     <button
                         onClick={() => isOpen()}
-                        className="absolute left-1/2 -top-16 lg:top-0 lg:right-0 m-3 p-2 bg-white rounded-full shadow-lg"
+                        className="absolute left-1/2 -translate-x-full -top-16 m-3 p-2 bg-white rounded-full shadow-lg"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
