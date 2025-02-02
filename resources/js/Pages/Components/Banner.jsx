@@ -13,7 +13,12 @@ export default function Banner() {
                 backgroundImage: `url('${domain}/images/banner-bg.png')`,
             }}
         >
-            {isOpen && <PopupVideo isOpen={() => setIsOpen(!isOpen)} />}
+            {isOpen && (
+                <PopupVideo
+                    videoLink="	https://www.youtube.com/embed/5TRoZSTCRwA?si=0L6mqIKossGS_aTu"
+                    isOpen={() => setIsOpen(!isOpen)}
+                />
+            )}
             <div className="container mx-auto ">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center px-5">
                     <div className="py-10">
@@ -51,7 +56,8 @@ export default function Banner() {
                             <div className="px-5 lg:py-8">
                                 <div>
                                     <img
-                                        src={`${domain}/images/banner-img.png`}
+                                        className="rounded-lg"
+                                        src={`${domain}/images/banner-img.jpg`}
                                         alt="Ahmad's IT Institute"
                                     />
                                     <div

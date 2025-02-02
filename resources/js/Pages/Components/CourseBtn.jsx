@@ -5,6 +5,7 @@ import { FaChevronRight } from "react-icons/fa";
 export default function CourseBtn({ className }) {
     return (
         <Link
+            href={route("courses")}
             className={`${
                 className && className
             } bg-gradient-to-r from-purple-500 to-pink-500 px-6 transition-all inline-flex items-center text-white py-3 font-semibold rounded`}
