@@ -4,7 +4,7 @@ import { MdOutlineStar } from "react-icons/md";
 export default function PageBanner() {
     const domain = window.location.origin;
     return (
-        <div className="px-5">
+        <div className="px-5 max-w-screen-xl mx-auto">
             <div className="grid grid-col-1 lg:grid-cols-2 items-center gap-6 container mx-auto mt-[120px]">
                 <div className="order-2 lg:order-1">
                     <h1 className="flex text-[26px] lg:text-[40px] font-bold items-center">
@@ -32,7 +32,7 @@ export default function PageBanner() {
                         ASP.NET Core আপনার আদর্শ পছন্দ হতে পারে এই কোর্সের জন্য
                         মৌলিক প্রোগ্রামিং জ্ঞান প্রয়োজন।
                     </p>
-                    <div className="grid gap-3 mt-8 grid-cols-4">
+                    <div className="grid gap-3 mt-8 grid-cols-1 lg:grid-cols-2 items-center">
                         <div className="border rounded-sm text-center p-2">
                             <span className="block">কোর্স ফি</span>
                             <span className="block font-semibold">

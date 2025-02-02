@@ -6,7 +6,7 @@ import { MdOutlineAlternateEmail, MdOutlinePhoneInTalk } from "react-icons/md";
 export default function Index() {
     return (
         <GuestLayout>
-            <div className="mt-[120px] min-h-[calc(100vh-290px)]">
+            <div className="mt-[120px] min-h-[calc(100vh-290px)] max-w-screen-xl mx-auto">
                 <div className="mt-[80px] px-3 lg:px-0">
                     <div className="container mx-auto ">
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">

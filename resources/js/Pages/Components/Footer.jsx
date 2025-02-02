@@ -8,7 +8,7 @@ export default function Footer() {
                 backgroundImage: `url('${domain}/images/footer-bg.png')`,
             }}
         >
-            <div className="container  mx-auto pt-[20px] pb-[20px] mt-[80px]">
+            <div className="container pt-[20px] pb-[20px] mt-[80px] max-w-screen-xl mx-auto">
                 <div className="flex flex-col lg:flex-row justify-between items-center mt-[20px]">
                     <div className="mb-2 lg:mb-0">
                         <ul className="flex">

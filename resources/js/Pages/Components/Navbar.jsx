@@ -8,8 +8,8 @@ export default function Navbar() {
     const domain = window.location.origin;
 
     return (
-        <div className="border-b border-b-[#f1f1f1] absolute top-0 left-0 w-full">
-            <div className="flex items-center container mx-auto py-5 px-2 ">
+        <div className="border-b  border-b-[#f1f1f1] absolute top-0 left-0 w-full">
+            <div className="flex max-w-screen-xl items-center container mx-auto py-5 px-2 ">
                 <div className="me-auto">
                     <Link href="/">
                         <img

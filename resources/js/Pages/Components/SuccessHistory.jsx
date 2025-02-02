@@ -75,7 +75,7 @@ export default function SuccessHistory() {
         ],
     };
     return (
-        <div className="px-3 lg:px-0">
+        <div className="px-3 max-w-screen-xl mx-auto">
             {isOpen && <PopupVideo isOpen={() => setIsOpen(!isOpen)} />}
             <div className="container mx-auto mt-[80px]">
                 <div>

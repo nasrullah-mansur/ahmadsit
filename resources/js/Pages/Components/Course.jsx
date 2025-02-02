@@ -51,7 +51,7 @@ export default function Course() {
     ];
 
     return (
-        <div className="mt-[80px]">
+        <div className="mt-[80px] px-3 max-w-screen-xl mx-auto">
             <div className="container mx-auto">
                 <div className="text-center max-w-[875px] mx-auto">
                     <h2 className="text-[48px] font-bold mb-[18px]">
@@ -64,7 +64,7 @@ export default function Course() {
                         মেন্টরদের গাইডলাইনের মাধ্যমে।
                     </p>
                 </div>
-                <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6 px-3 lg:px-0">
+                <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6 lg:px-0">
                     {courses.map((course) => (
                         <div
                             key={course.id}

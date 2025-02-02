@@ -35,8 +35,8 @@ export default function Counter() {
     ];
 
     return (
-        <div className="container mx-auto bg-[#F2F2F2] rounded-lg px-24 py-12 mt-[80px]">
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        <div className=" bg-[#F2F2F2] rounded-lg px-24 py-12 mt-[80px]">
+            <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
                 {items.map((item) => (
                     <div
                         key={item.id}

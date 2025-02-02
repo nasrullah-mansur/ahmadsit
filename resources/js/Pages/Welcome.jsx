@@ -12,7 +12,6 @@ import HeadSection from "./Components/HeadSection";
 export default function Welcome() {
     return (
         <GuestLayout>
-            <HeadSection />
             <Banner />
             <Counter />
             <Course />

@@ -8,7 +8,7 @@ export default function Banner() {
     const domain = window.location.origin;
     return (
         <div
-            className="pt-[90px]"
+            className="pt-[90px] max-w-screen-xl mx-auto"
             style={{
                 backgroundImage: `url('${domain}/images/banner-bg.png')`,
             }}

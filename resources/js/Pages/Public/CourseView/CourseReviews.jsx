@@ -45,7 +45,7 @@ export default function CourseReviews() {
         ],
     };
     return (
-        <div className="px-5">
+        <div className="px-5 max-w-screen-xl mx-auto">
             <div className="container mx-auto mt-[50px]">
                 <Slider {...settings} className=" -mx-3">
                     {successStory.map((item) => (

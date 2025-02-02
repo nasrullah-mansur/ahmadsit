@@ -3,7 +3,7 @@ import React from "react";
 export default function Solution() {
     const domain = window.location.origin;
     return (
-        <div className="px-3 lg:px-0">
+        <div className="px-3 max-w-screen-xl mx-auto">
             <div className="container mx-auto mt-[80px]">
                 <div className="max-w-[860px] mx-auto text-center">
                     <h2 className="text-[48px] font-semibold mb-[15px]">
@@ -31,7 +31,7 @@ export default function Solution() {
                                 </div>
                             </div>
                             <h4 className="text-[22px] font-semibold ml-[15px]">
-                                ক্যারিয়ার প্লেসমেন্ট সাপোর্ট
+                                ক্যারিয়ার প্লেসমেন্ট
                             </h4>
                         </div>
                         <p className="text-[18px] text-[#3D3D3D] mt-[30px]">

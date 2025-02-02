@@ -41,7 +41,7 @@ export default function Facility() {
                         স্ক্র্যাম্বল করেছিল। এটা আছে
                     </p>
                 </div>
-                <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
+                <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8 pb-8">
                     {items.map((item) => (
                         <div
                             key={item.id}

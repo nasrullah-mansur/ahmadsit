@@ -18,7 +18,7 @@ export default function Index() {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-3 gap-6">
+                <div className="grid grid-cols-3 gap-6 max-w-screen-xl mx-auto">
                     <div className="bg-[#F2F2F2] p-4 rounded-[20px]">
                         <div className="bg-white rounded-[20px]">
                             <img

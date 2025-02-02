@@ -4,7 +4,7 @@ import { FaRegAddressBook } from "react-icons/fa";
 
 export default function Contact() {
     return (
-        <div className="mt-[80px] px-3 lg:px-0">
+        <div className="mt-[80px] px-3 max-w-screen-xl mx-auto">
             <div className="container mx-auto ">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     <div className="order-2">

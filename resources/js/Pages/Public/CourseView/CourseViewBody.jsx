@@ -6,8 +6,8 @@ export default function CourseViewBody() {
 
     return (
         <>
-            <div className="py-[80px] bg-[#f9f9f9] mt-[50px]">
-                <div className="container mx-auto ">
+            <div className="py-[80px] bg-[#f2f2f2] mt-[50px] ">
+                <div className="container mx-auto max-w-screen-xl">
                     <ul className="flex gap-4 justify-center">
                         <li
                             className={`border px-4 py-2 rounded-md cursor-pointer ${

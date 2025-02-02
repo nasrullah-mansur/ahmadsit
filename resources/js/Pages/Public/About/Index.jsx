@@ -7,7 +7,7 @@ export default function Index() {
     const domain = window.location.origin;
     return (
         <GuestLayout>
-            <div className="mt-[120px]">
+            <div className="mt-[120px] max-w-screen-xl mx-auto">
                 <div className="px-5">
                     <div className="grid grid-col-1 lg:grid-cols-2 items-center gap-6 container mx-auto mt-[120px]">
                         <div className="order-2 lg:order-1">
@@ -55,8 +55,8 @@ export default function Index() {
                 </div>
             </div>
 
-            <div className="bg-gray-100 py-10 mt-[50px]">
-                <div className="text-center max-w-[875px] mx-auto pt-[40px]">
+            <div className="bg-gray-100 py-10 mt-[50px] ">
+                <div className="text-center max-w-[875px] mx-auto pt-[40px] ">
                     <h2 className="text-[48px] font-bold mb-[18px]">
                         আমাদের দেশসেরা শিক্ষকবৃন্দ
                     </h2>
@@ -67,7 +67,7 @@ export default function Index() {
                         মেন্টরদের গাইডলাইনের মাধ্যমে।
                     </p>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 px-4 lg:grid-cols-3 xl:grid-cols-4 container mx-auto gap-5">
+                <div className="max-w-screen-xl grid grid-cols-1 md:grid-cols-2 px-4 lg:grid-cols-3 xl:grid-cols-4 container mx-auto gap-5">
                     <div className=" bg-white border  rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
                         <img
                             className="w-full h-64 object-cover object-center rounded-t-lg"
