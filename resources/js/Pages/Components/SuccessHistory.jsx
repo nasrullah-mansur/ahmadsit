@@ -4,32 +4,10 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import PopupVideo from "./PopupVideo";
 
-export default function SuccessHistory() {
+export default function SuccessHistory({ stories }) {
     const [isOpen, setIsOpen] = useState(false);
+    const [videoLink, setVideoLink] = useState("");
     const domain = window.location.origin;
-
-    const successStory = [
-        {
-            id: 1,
-            image: `${domain}/images/graphic-design.png`,
-            video: `<iframe width="560" height="315" src="https://www.youtube.com/embed/4xZWbBRkF8s?si=wa1QPgnl3_XdGACj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
-        },
-        {
-            id: 2,
-            image: `${domain}/images/graphic-design.png`,
-            video: `<iframe width="560" height="315" src="https://www.youtube.com/embed/4xZWbBRkF8s?si=wa1QPgnl3_XdGACj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
-        },
-        {
-            id: 3,
-            image: `${domain}/images/graphic-design.png`,
-            video: `<iframe width="560" height="315" src="https://www.youtube.com/embed/4xZWbBRkF8s?si=wa1QPgnl3_XdGACj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
-        },
-        {
-            id: 4,
-            image: `${domain}/images/graphic-design.png`,
-            video: `<iframe width="560" height="315" src="https://www.youtube.com/embed/4xZWbBRkF8s?si=wa1QPgnl3_XdGACj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
-        },
-    ];
 
     function NextArr(props) {
         const { className, onClick } = props;
@@ -75,9 +53,21 @@ export default function SuccessHistory() {
             },
         ],
     };
+
+    const handlePopup = (iframe) => {
+        console.log(iframe);
+        setIsOpen(true);
+        setVideoLink(iframe);
+    };
+
     return (
         <div className="px-3 max-w-screen-xl mx-auto">
-            {isOpen && <PopupVideo isOpen={() => setIsOpen(!isOpen)} />}
+            {isOpen && (
+                <PopupVideo
+                    videoLink={videoLink}
+                    isOpen={() => setIsOpen(!isOpen)}
+                />
+            )}
             <div className="container mx-auto mt-[80px]">
                 <div>
                     <div className="max-w-[860px] px-4 lg:px-0 ">
@@ -85,24 +75,25 @@ export default function SuccessHistory() {
                             ছাত্রদের মুখেই শুনুন সাফল্যের গল্প
                         </h2>
                         <p className=" mb-[50px]">
-                            Lorem Ipsum হল মুদ্রণ এবং টাইপসেটিং শিল্পের ডামি
-                            পাঠ্য। লোরেম ইপসাম 1500 এর দশক থেকে শিল্পের মানক
-                            ডামি টেক্সট হয়েছে, যখন একটি অজানা প্রিন্টার টাইপের
-                            একটি গ্যালি নিয়েছিল এবং একটি টাইপ নমুনা বই তৈরি
-                            করতে এটিকে স্ক্র্যাম্বল করেছিল। এটা আছে
+                            প্রত্যেক সফলতার পেছনে থাকে এক অদম্য পরিশ্রম,
+                            অধ্যবসায় ও একাগ্রতা। আমাদের ছাত্রদের সাফল্যের
+                            গল্পগুলো তারই এক জীবন্ত উদাহরণ। তারা কীভাবে বাধা
+                            অতিক্রম করেছে, কীভাবে কঠোর পরিশ্রম করে নিজেদের
+                            লক্ষ্যে পৌঁছেছে - এসব গল্প অনুপ্রেরণা জোগাবে
+                            আপনাকেও!
                         </p>
                     </div>
                 </div>
                 <Slider {...settings} className=" -mx-3">
-                    {successStory.map((item) => (
+                    {stories?.map((item) => (
                         <div key={item.id}>
                             <div
                                 className="px-3"
-                                onClick={() => setIsOpen(true)}
+                                onClick={() => handlePopup(item.iframe)}
                             >
                                 <img
                                     className="w-full rounded-[15px]"
-                                    src={item.image}
+                                    src={`${domain}/uploads/${item.image}`}
                                     alt="img"
                                 />
                             </div>

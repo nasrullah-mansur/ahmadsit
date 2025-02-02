@@ -4,6 +4,7 @@ import { MdOutlineLightMode } from "react-icons/md";
 import { AiOutlineFullscreen } from "react-icons/ai";
 import { AiOutlineFullscreenExit } from "react-icons/ai";
 import { MdLightMode } from "react-icons/md";
+import { Link } from "@inertiajs/react";
 
 export default function DashboardHeader({ isNavbarShow }) {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -164,12 +165,12 @@ function Dropdown() {
                     </a>
                 </li>
                 <li>
-                    <a
+                    <Link
                         href="#"
                         className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                     >
                         Sigh Out
-                    </a>
+                    </Link>
                 </li>
             </ul>
         </div>

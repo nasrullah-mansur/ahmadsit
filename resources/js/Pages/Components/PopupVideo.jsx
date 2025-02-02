@@ -1,11 +1,11 @@
-export default function PopupVideo({ isOpen }) {
+export default function PopupVideo({ isOpen, videoLink }) {
     return (
         <div className="w-full h-screen flex justify-center px-3 items-center fixed top-0 left-0 bg-black bg-opacity-50 z-50">
             <div className=" bg-white rounded-lg shadow-lg w-full h-[270px] md:w-[600px] md:h-[350px] lg:w-[800px] lg:h-[450px]">
                 <div className="relative h-full">
                     <iframe
                         className="w-full h-full"
-                        src="https://www.youtube.com/embed/5qap5aO4i9A"
+                        src={videoLink}
                         title="YouTube video player"
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

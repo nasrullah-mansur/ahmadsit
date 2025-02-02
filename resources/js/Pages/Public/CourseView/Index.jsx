@@ -3,8 +3,9 @@ import React from "react";
 import PageBanner from "./PageBanner";
 import CourseViewBody from "./CourseViewBody";
 import CourseReviews from "./CourseReviews";
+import SuccessHistory from "@/Pages/Components/SuccessHistory";
 
-export default function CourseView({ course }) {
+export default function CourseView({ course, stories }) {
     return (
         <GuestLayout>
             <PageBanner course={course} />
@@ -12,7 +13,7 @@ export default function CourseView({ course }) {
                 details={course.details}
                 courseCurriculum={course.courseCurriculum}
             />
-            <CourseReviews />
+            <SuccessHistory stories={stories} />
         </GuestLayout>
     );
 }

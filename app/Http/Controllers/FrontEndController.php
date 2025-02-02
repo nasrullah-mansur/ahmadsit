@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Course;
+use App\Models\SuccessStory;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
@@ -10,13 +11,15 @@ class FrontEndController extends Controller
 {
     function index()
     {
+        $stories = SuccessStory::all();
         $courses = Course::all();
-        return Inertia::render('Welcome', ['courses' => $courses]);
+        return Inertia::render('Welcome', ['courses' => $courses, "stories" => $stories]);
     }
 
     function about()
     {
-        return Inertia::render('Public/About/Index');
+        $stories = SuccessStory::all();
+        return Inertia::render('Public/About/Index', ["stories" => $stories]);
     }
 
     function contact()
@@ -26,20 +29,24 @@ class FrontEndController extends Controller
 
     function courses()
     {
-        return Inertia::render('Public/Courses/Index');
+        $courses = Course::all();
+        return Inertia::render('Public/Courses/Index', ["courses" => $courses]);
     }
 
     function success()
     {
-        return Inertia::render('Public/Success/Index');
+        $stories = SuccessStory::all();
+        return Inertia::render('Public/Success/Index', ["stories" => $stories]);
     }
 
     function courses_view($slug)
     {
         $course = Course::where('slug', $slug)->firstOrFail();
+        $stories = SuccessStory::where('course_id', $course->id)->get();
         return Inertia::render('Public/CourseView/Index', [
             'slug' => $slug,
-            "course" => $course
+            "course" => $course,
+            "stories" => $stories
         ]);
     }
 }

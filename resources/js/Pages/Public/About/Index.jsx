@@ -3,7 +3,7 @@ import SuccessHistory from "@/Pages/Components/SuccessHistory";
 
 import { IoMdStarOutline } from "react-icons/io";
 
-export default function Index() {
+export default function Index({ stories }) {
     const domain = window.location.origin;
     return (
         <GuestLayout>
@@ -159,7 +159,7 @@ export default function Index() {
                 </div>
             </div>
 
-            <SuccessHistory />
+            <SuccessHistory stories={stories} />
         </GuestLayout>
     );
 }
