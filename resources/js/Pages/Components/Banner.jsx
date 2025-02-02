@@ -26,7 +26,7 @@ export default function Banner() {
                                 স্বাগতম! আপনাকে পেয়ে আমরা আনন্দিত
                             </span>
                         </div>
-                        <h1 className="text-[32px] lg:text-[46px] font-bold">
+                        <h1 className="text-[26px] lg:text-[36px] font-bold">
                             আপনাকে দক্ষ করতে আপনার পাশে{" "}
                             <span className="text-primary">
                                 আহমাদ’স আইটি ইনিস্টিটিউট

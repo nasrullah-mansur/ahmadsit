@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Course;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
@@ -9,7 +10,8 @@ class FrontEndController extends Controller
 {
     function index()
     {
-        return Inertia::render('Welcome');
+        $courses = Course::all();
+        return Inertia::render('Welcome', ['courses' => $courses]);
     }
 
     function about()
@@ -34,8 +36,10 @@ class FrontEndController extends Controller
 
     function courses_view($slug)
     {
+        $course = Course::where('slug', $slug)->firstOrFail();
         return Inertia::render('Public/CourseView/Index', [
-            'slug' => $slug
+            'slug' => $slug,
+            "course" => $course
         ]);
     }
 }

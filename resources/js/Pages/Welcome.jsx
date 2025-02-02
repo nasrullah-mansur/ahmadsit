@@ -9,12 +9,12 @@ import Solution from "./Components/Solution";
 import Contact from "./Components/Contact";
 import HeadSection from "./Components/HeadSection";
 
-export default function Welcome() {
+export default function Welcome({ courses }) {
     return (
         <GuestLayout>
             <Banner />
             <Counter />
-            <Course />
+            <Course courses={courses} />
             <Facility />
             <SuccessHistory />
             <Solution />

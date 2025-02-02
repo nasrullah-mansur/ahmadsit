@@ -70,6 +70,7 @@ export default function SuccessHistory() {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 2,
+                    arrows: false,
                 },
             },
         ],
@@ -79,11 +80,11 @@ export default function SuccessHistory() {
             {isOpen && <PopupVideo isOpen={() => setIsOpen(!isOpen)} />}
             <div className="container mx-auto mt-[80px]">
                 <div>
-                    <div className="max-w-[860px] px-4 lg:px-0 mb-[120px]">
-                        <h2 className="text-[48px] font-semibold">
+                    <div className="max-w-[860px] px-4 lg:px-0 ">
+                        <h2 className="text-[26px] lg:text-[36px] font-semibold">
                             ছাত্রদের মুখেই শুনুন সাফল্যের গল্প
                         </h2>
-                        <p className="text-[18px] mb-[50px]">
+                        <p className=" mb-[50px]">
                             Lorem Ipsum হল মুদ্রণ এবং টাইপসেটিং শিল্পের ডামি
                             পাঠ্য। লোরেম ইপসাম 1500 এর দশক থেকে শিল্পের মানক
                             ডামি টেক্সট হয়েছে, যখন একটি অজানা প্রিন্টার টাইপের

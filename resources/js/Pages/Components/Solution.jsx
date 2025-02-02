@@ -6,10 +6,10 @@ export default function Solution() {
         <div className="px-3 max-w-screen-xl mx-auto">
             <div className="container mx-auto mt-[80px]">
                 <div className="max-w-[860px] mx-auto text-center">
-                    <h2 className="text-[48px] font-semibold mb-[15px]">
+                    <h2 className="text-[26px] lg:text-[36px] font-semibold mb-[15px]">
                         এক্সক্লুসিভ সলিউশনস
                     </h2>
-                    <p className="text-[18px] mb-[50px]">
+                    <p className="mb-[50px]">
                         Lorem Ipsum হল মুদ্রণ এবং টাইপসেটিং শিল্পের ডামি পাঠ্য।
                         লোরেম ইপসাম 1500 এর দশক থেকে শিল্পের মানক ডামি টেক্সট
                         হয়েছে, যখন একটি অজানা প্রিন্টার টাইপের একটি গ্যালি

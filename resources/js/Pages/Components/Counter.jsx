@@ -35,12 +35,12 @@ export default function Counter() {
     ];
 
     return (
-        <div className=" bg-[#F2F2F2] rounded-lg px-24 py-12 mt-[80px]">
-            <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        <div className=" bg-[#F2F2F2] rounded-lg px-4 py-12 mt-[80px]">
+            <div className="max-w-screen-xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
                 {items.map((item) => (
                     <div
                         key={item.id}
-                        className="bg-white mx-auto w-[190px] h-[190px] flex justify-center items-center rounded-md"
+                        className="bg-white mx-auto w-full h-[190px] flex justify-center items-center rounded-md"
                     >
                         <div
                             className={`w-[100px] h-[100px] ${item.color} rounded-full -mt-12`}

@@ -4,11 +4,14 @@ import PageBanner from "./PageBanner";
 import CourseViewBody from "./CourseViewBody";
 import CourseReviews from "./CourseReviews";
 
-export default function CourseView() {
+export default function CourseView({ course }) {
     return (
         <GuestLayout>
-            <PageBanner />
-            <CourseViewBody />
+            <PageBanner course={course} />
+            <CourseViewBody
+                details={course.details}
+                courseCurriculum={course.courseCurriculum}
+            />
             <CourseReviews />
         </GuestLayout>
     );

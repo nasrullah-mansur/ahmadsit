@@ -30,10 +30,10 @@ export default function Facility() {
         <div className="bg-[#073E3E]">
             <div className="container mx-auto rounded-lg px-24 py-12 mt-[80px]">
                 <div className="max-w-[860px] mx-auto text-center mb-[50px]">
-                    <h2 className="text-[48px] text-white font-semibold mb-[18px]">
+                    <h2 className="text-[26px] lg:text-[36px] text-white font-semibold mb-[18px]">
                         আমাদের সুবিধা সমূহ
                     </h2>
-                    <p className="text-white text-[18px]">
+                    <p className="text-white ">
                         Lorem Ipsum হল মুদ্রণ এবং টাইপসেটিং শিল্পের ডামি পাঠ্য।
                         লোরেম ইপসাম 1500 এর দশক থেকে শিল্পের মানক ডামি টেক্সট
                         হয়েছে, যখন একটি অজানা প্রিন্টার টাইপের একটি গ্যালি

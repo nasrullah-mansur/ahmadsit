@@ -1,7 +1,7 @@
 import { useState } from "react";
 import CourseReviews from "./CourseReviews";
 
-export default function CourseViewBody() {
+export default function CourseViewBody({ courseCurriculum, details }) {
     const [section, setSection] = useState("overview");
 
     return (
@@ -38,35 +38,7 @@ export default function CourseViewBody() {
                                         কোর্স ওভারভিউ
                                     </h2>
                                     <p className="mt-4 text-lg text-gray-600">
-                                        ওয়েব ডেভেলপমেন্ট হল আধুনিক প্রযুক্তির
-                                        অন্যতম চাহিদাসম্পন্ন দক্ষতা, যা আপনাকে
-                                        একটি সফল ক্যারিয়ার গড়তে সহায়তা করবে।
-                                        এটি মূলত দুটি ভাগে বিভক্ত: ফ্রন্টএন্ড
-                                        (যেখানে ওয়েবসাইটের ডিজাইন ও ইউজার
-                                        ইন্টারফেস তৈরি হয়) এবং ব্যাকএন্ড
-                                        (যেখানে ওয়েবসাইটের ডাটা ম্যানেজমেন্ট ও
-                                        সার্ভার সাইড কাজ করা হয়)। এই কোর্সে
-                                        আমরা আপনাকে শিখাবো কিভাবে এই দুটি ভাগের
-                                        কাজ করতে হয়। ওয়েব ডেভেলপমেন্ট হল
-                                        আধুনিক প্রযুক্তির অন্যতম চাহিদাসম্পন্ন
-                                        দক্ষতা, যা আপনাকে একটি সফল ক্যারিয়ার
-                                        গড়তে সহায়তা করবে। এটি মূলত দুটি ভাগে
-                                        বিভক্ত: ফ্রন্টএন্ড (যেখানে ওয়েবসাইটের
-                                        ডিজাইন ও ইউজার ইন্টারফেস তৈরি হয়) এবং
-                                        ব্যাকএন্ড (যেখানে ওয়েবসাইটের ডাটা
-                                        ম্যানেজমেন্ট ও সার্ভার সাইড কাজ করা
-                                        হয়)। এই কোর্সে আমরা আপনাকে শিখাবো
-                                        কিভাবে এই দুটি ভাগের কাজ করতে হয়। ওয়েব
-                                        ডেভেলপমেন্ট হল আধুনিক প্রযুক্তির অন্যতম
-                                        চাহিদাসম্পন্ন দক্ষতা, যা আপনাকে একটি সফল
-                                        ক্যারিয়ার গড়তে সহায়তা করবে। এটি মূলত
-                                        দুটি ভাগে বিভক্ত: ফ্রন্টএন্ড (যেখানে
-                                        ওয়েবসাইটের ডিজাইন ও ইউজার ইন্টারফেস
-                                        তৈরি হয়) এবং ব্যাকএন্ড (যেখানে
-                                        ওয়েবসাইটের ডাটা ম্যানেজমেন্ট ও সার্ভার
-                                        সাইড কাজ করা হয়)। এই কোর্সে আমরা আপনাকে
-                                        শিখাবো কিভাবে এই দুটি ভাগের কাজ করতে
-                                        হয়।
+                                        {details}
                                     </p>
                                 </div>
                             )}
@@ -77,94 +49,19 @@ export default function CourseViewBody() {
                                         কোর্স কারিকুলাম
                                     </h2>
                                     <ul className="mt-4 text-lg grid grid-cols-2 lg:grid-cols-4 text-gray-600">
-                                        <li className="flex items-center gap-2">
-                                            <span className="rounded -mt-1 w-[12px] h-[12px] bg-gray-600 inline-block"></span>
-                                            <span className="block">HTML</span>
-                                        </li>
-                                        <li className="flex items-center gap-2">
-                                            <span className="rounded -mt-1 w-[12px] h-[12px] bg-gray-600 inline-block"></span>
-                                            <span className="block">HTML</span>
-                                        </li>
-                                        <li className="flex items-center gap-2">
-                                            <span className="rounded -mt-1 w-[12px] h-[12px] bg-gray-600 inline-block"></span>
-                                            <span className="block">HTML</span>
-                                        </li>
-                                        <li className="flex items-center gap-2">
-                                            <span className="rounded -mt-1 w-[12px] h-[12px] bg-gray-600 inline-block"></span>
-                                            <span className="block">HTML</span>
-                                        </li>
-                                        <li className="flex items-center gap-2">
-                                            <span className="rounded -mt-1 w-[12px] h-[12px] bg-gray-600 inline-block"></span>
-                                            <span className="block">HTML</span>
-                                        </li>
-                                        <li className="flex items-center gap-2">
-                                            <span className="rounded -mt-1 w-[12px] h-[12px] bg-gray-600 inline-block"></span>
-                                            <span className="block">HTML</span>
-                                        </li>
-                                        <li className="flex items-center gap-2">
-                                            <span className="rounded -mt-1 w-[12px] h-[12px] bg-gray-600 inline-block"></span>
-                                            <span className="block">HTML</span>
-                                        </li>
-                                        <li className="flex items-center gap-2">
-                                            <span className="rounded -mt-1 w-[12px] h-[12px] bg-gray-600 inline-block"></span>
-                                            <span className="block">HTML</span>
-                                        </li>
-                                        <li className="flex items-center gap-2">
-                                            <span className="rounded -mt-1 w-[12px] h-[12px] bg-gray-600 inline-block"></span>
-                                            <span className="block">HTML</span>
-                                        </li>
-                                        <li className="flex items-center gap-2">
-                                            <span className="rounded -mt-1 w-[12px] h-[12px] bg-gray-600 inline-block"></span>
-                                            <span className="block">HTML</span>
-                                        </li>
-                                        <li className="flex items-center gap-2">
-                                            <span className="rounded -mt-1 w-[12px] h-[12px] bg-gray-600 inline-block"></span>
-                                            <span className="block">HTML</span>
-                                        </li>
-                                        <li className="flex items-center gap-2">
-                                            <span className="rounded -mt-1 w-[12px] h-[12px] bg-gray-600 inline-block"></span>
-                                            <span className="block">HTML</span>
-                                        </li>
-                                        <li className="flex items-center gap-2">
-                                            <span className="rounded -mt-1 w-[12px] h-[12px] bg-gray-600 inline-block"></span>
-                                            <span className="block">HTML</span>
-                                        </li>
-                                        <li className="flex items-center gap-2">
-                                            <span className="rounded -mt-1 w-[12px] h-[12px] bg-gray-600 inline-block"></span>
-                                            <span className="block">HTML</span>
-                                        </li>
-                                        <li className="flex items-center gap-2">
-                                            <span className="rounded -mt-1 w-[12px] h-[12px] bg-gray-600 inline-block"></span>
-                                            <span className="block">HTML</span>
-                                        </li>
-                                        <li className="flex items-center gap-2">
-                                            <span className="rounded -mt-1 w-[12px] h-[12px] bg-gray-600 inline-block"></span>
-                                            <span className="block">HTML</span>
-                                        </li>
-                                        <li className="flex items-center gap-2">
-                                            <span className="rounded -mt-1 w-[12px] h-[12px] bg-gray-600 inline-block"></span>
-                                            <span className="block">HTML</span>
-                                        </li>
-                                        <li className="flex items-center gap-2">
-                                            <span className="rounded -mt-1 w-[12px] h-[12px] bg-gray-600 inline-block"></span>
-                                            <span className="block">HTML</span>
-                                        </li>
-                                        <li className="flex items-center gap-2">
-                                            <span className="rounded -mt-1 w-[12px] h-[12px] bg-gray-600 inline-block"></span>
-                                            <span className="block">HTML</span>
-                                        </li>
-                                        <li className="flex items-center gap-2">
-                                            <span className="rounded -mt-1 w-[12px] h-[12px] bg-gray-600 inline-block"></span>
-                                            <span className="block">HTML</span>
-                                        </li>
-                                        <li className="flex items-center gap-2">
-                                            <span className="rounded -mt-1 w-[12px] h-[12px] bg-gray-600 inline-block"></span>
-                                            <span className="block">HTML</span>
-                                        </li>
-                                        <li className="flex items-center gap-2">
-                                            <span className="rounded -mt-1 w-[12px] h-[12px] bg-gray-600 inline-block"></span>
-                                            <span className="block">HTML</span>
-                                        </li>
+                                        {courseCurriculum
+                                            .split(",")
+                                            .map((item, index) => (
+                                                <li
+                                                    key={index}
+                                                    className="flex items-center gap-2"
+                                                >
+                                                    <span className="rounded -mt-1 w-[12px] h-[12px] bg-gray-600 inline-block"></span>
+                                                    <span className="block">
+                                                        {item}
+                                                    </span>
+                                                </li>
+                                            ))}
                                     </ul>
                                 </div>
                             )}
