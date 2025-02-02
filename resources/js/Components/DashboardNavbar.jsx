@@ -51,6 +51,24 @@ export default function DashboardNavbar({ className, onNavbarShow }) {
                 },
             ],
         },
+        {
+            id: 4,
+            name: "Our Teachers",
+            link: "#",
+            isActive: false,
+            children: [
+                {
+                    id: 1,
+                    name: "All Teachers",
+                    link: route("teacher.index"),
+                },
+                {
+                    id: 2,
+                    name: "Create Teacher",
+                    link: route("teacher.create"),
+                },
+            ],
+        },
     ]);
 
     const handleMenuClick = (id) => {

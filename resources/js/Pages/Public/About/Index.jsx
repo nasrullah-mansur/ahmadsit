@@ -3,7 +3,7 @@ import SuccessHistory from "@/Pages/Components/SuccessHistory";
 
 import { IoMdStarOutline } from "react-icons/io";
 
-export default function Index({ stories }) {
+export default function Index({ stories, teachers }) {
     const domain = window.location.origin;
     return (
         <GuestLayout>
@@ -68,94 +68,31 @@ export default function Index({ stories }) {
                     </p>
                 </div>
                 <div className="max-w-screen-xl grid grid-cols-1 md:grid-cols-2 px-4 lg:grid-cols-3 xl:grid-cols-4 container mx-auto gap-5">
-                    <div className=" bg-white border  rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
-                        <img
-                            className="w-full h-64 object-cover object-center rounded-t-lg"
-                            src={`${domain}/images/web-design.png`}
-                            alt=""
-                        />
+                    {teachers.map((teacher) => (
+                        <div
+                            key={teacher.id}
+                            className=" bg-white border  rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                        >
+                            <img
+                                className="w-full h-64 object-cover object-center rounded-t-lg"
+                                src={`${domain}/images/web-design.png`}
+                                alt=""
+                            />
 
-                        <div className="p-5">
-                            <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                নাছরুল্লাহ মানছুর
-                            </h5>
+                            <div className="p-5">
+                                <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                    {teacher.name}
+                                </h5>
 
-                            <small className="block mb-2 font-semibold">
-                                Web Developer
-                            </small>
-                            <p className="mb-3 text-gray-700 dark:text-gray-400">
-                                Here are the biggest enterprise technology
-                                acquisitions of 2021 so far, in reverse
-                                chronological order.
-                            </p>
+                                <small className="block mb-2 font-semibold">
+                                    {teacher.title}
+                                </small>
+                                <p className="mb-3 text-gray-700 dark:text-gray-400">
+                                    {teacher.details}
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div className=" bg-white border  rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
-                        <img
-                            className="w-full h-64 object-cover object-center rounded-t-lg"
-                            src={`${domain}/images/web-design.png`}
-                            alt=""
-                        />
-
-                        <div className="p-5">
-                            <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                নাছরুল্লাহ মানছুর
-                            </h5>
-
-                            <small className="block mb-2 font-semibold">
-                                Web Developer
-                            </small>
-                            <p className="mb-3 text-gray-700 dark:text-gray-400">
-                                Here are the biggest enterprise technology
-                                acquisitions of 2021 so far, in reverse
-                                chronological order.
-                            </p>
-                        </div>
-                    </div>
-                    <div className=" bg-white border  rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
-                        <img
-                            className="w-full h-64 object-cover object-center rounded-t-lg"
-                            src={`${domain}/images/web-design.png`}
-                            alt=""
-                        />
-
-                        <div className="p-5">
-                            <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                নাছরুল্লাহ মানছুর
-                            </h5>
-
-                            <small className="block mb-2 font-semibold">
-                                Web Developer
-                            </small>
-                            <p className="mb-3 text-gray-700 dark:text-gray-400">
-                                Here are the biggest enterprise technology
-                                acquisitions of 2021 so far, in reverse
-                                chronological order.
-                            </p>
-                        </div>
-                    </div>
-                    <div className=" bg-white border  rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
-                        <img
-                            className="w-full h-64 object-cover object-center rounded-t-lg"
-                            src={`${domain}/images/web-design.png`}
-                            alt=""
-                        />
-
-                        <div className="p-5">
-                            <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                নাছরুল্লাহ মানছুর
-                            </h5>
-
-                            <small className="block mb-2 font-semibold">
-                                Web Developer
-                            </small>
-                            <p className="mb-3 text-gray-700 dark:text-gray-400">
-                                Here are the biggest enterprise technology
-                                acquisitions of 2021 so far, in reverse
-                                chronological order.
-                            </p>
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </div>
 

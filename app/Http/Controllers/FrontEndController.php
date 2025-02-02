@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use Inertia\Inertia;
 use App\Models\Course;
+use App\Models\Teacher;
 use App\Models\SuccessStory;
 use Illuminate\Http\Request;
-use Inertia\Inertia;
 
 class FrontEndController extends Controller
 {
@@ -19,7 +20,8 @@ class FrontEndController extends Controller
     function about()
     {
         $stories = SuccessStory::all();
-        return Inertia::render('Public/About/Index', ["stories" => $stories]);
+        $teachers = Teacher::all();
+        return Inertia::render('Public/About/Index', ["stories" => $stories, "teachers" => $teachers]);
     }
 
     function contact()

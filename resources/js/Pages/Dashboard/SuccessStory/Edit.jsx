@@ -4,6 +4,7 @@ import { useForm } from "@inertiajs/react";
 export default function Edit({ courses, success }) {
     const { data, setData, post, processing, errors, reset } = useForm({
         iframe: success.iframe,
+        image: null,
         course_id: success.course_id,
     });
 

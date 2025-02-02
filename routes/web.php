@@ -7,6 +7,7 @@ use Illuminate\Foundation\Application;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\FrontEndController;
 use App\Http\Controllers\SuccessStoryController;
+use App\Http\Controllers\TeacherController;
 
 Route::get('/', [FrontEndController::class, 'index'])->name('home');
 Route::get('/about', [FrontEndController::class, 'about'])->name('about');
@@ -40,6 +41,14 @@ Route::middleware('auth')->group(function () {
         Route::get('/success-story/edit/{id}', [SuccessStoryController::class, 'edit'])->name('success.story.edit');
         Route::post('/success-story/update/{id}', [SuccessStoryController::class, 'update'])->name('success.story.update');
         Route::get('/success-story/delete/{id}', [SuccessStoryController::class, 'delete'])->name('success.story.delete');
+
+        // Teacher;
+        Route::get('/teachers', [TeacherController::class, 'index'])->name('teacher.index');
+        Route::get('/teachers/create', [TeacherController::class, 'create'])->name('teacher.create');
+        Route::post('/teachers/store', [TeacherController::class, 'store'])->name('teacher.store');
+        Route::get('/teachers/edit/{id}', [TeacherController::class, 'edit'])->name('teacher.edit');
+        Route::post('/teachers/update/{id}', [TeacherController::class, 'update'])->name('teacher.update');
+        Route::get('/teachers/delete/{id}', [TeacherController::class, 'delete'])->name('teacher.delete');
     });
 });
 
