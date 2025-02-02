@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Application;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\FrontEndController;
+use App\Http\Controllers\SuccessStoryController;
 
 Route::get('/', [FrontEndController::class, 'index'])->name('home');
 Route::get('/about', [FrontEndController::class, 'about'])->name('about');
@@ -31,6 +32,14 @@ Route::middleware('auth')->group(function () {
         Route::get('/courses/edit/{slug}', [CourseController::class, 'edit'])->name('course.edit');
         Route::post('/courses/update/{slug}', [CourseController::class, 'update'])->name('course.update');
         Route::get('/courses/delete/{slug}', [CourseController::class, 'delete'])->name('course.delete');
+
+        // Success;
+        Route::get('/success-story', [SuccessStoryController::class, 'index'])->name('success.story.index');
+        Route::get('/success-story/create', [SuccessStoryController::class, 'create'])->name('success.story.create');
+        Route::post('/success-story/store', [SuccessStoryController::class, 'store'])->name('success.story.store');
+        Route::get('/success-story/edit/{id}', [SuccessStoryController::class, 'edit'])->name('success.story.edit');
+        Route::post('/success-story/update/{id}', [SuccessStoryController::class, 'update'])->name('success.story.update');
+        Route::get('/success-story/delete/{id}', [SuccessStoryController::class, 'delete'])->name('success.story.delete');
     });
 });
 

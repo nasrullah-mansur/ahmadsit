@@ -22,8 +22,6 @@ export default function Create() {
         post(route("course.store"));
     };
 
-    console.log(errors);
-
     return (
         <AuthenticatedLayout>
             <h1 className="text-3xl font-bold">Create Course</h1>

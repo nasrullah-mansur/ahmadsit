@@ -33,6 +33,24 @@ export default function DashboardNavbar({ className, onNavbarShow }) {
                 },
             ],
         },
+        {
+            id: 3,
+            name: "Success Story",
+            link: "#",
+            isActive: false,
+            children: [
+                {
+                    id: 1,
+                    name: "All Story",
+                    link: route("success.story.index"),
+                },
+                {
+                    id: 2,
+                    name: "Create Story",
+                    link: route("success.story.create"),
+                },
+            ],
+        },
     ]);
 
     const handleMenuClick = (id) => {
