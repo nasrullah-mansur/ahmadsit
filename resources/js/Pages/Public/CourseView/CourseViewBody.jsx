@@ -37,9 +37,12 @@ export default function CourseViewBody({ courseCurriculum, details }) {
                                     <h2 className="border-l border-primary pl-4 text-2xl font-bold mt-8">
                                         কোর্স ওভারভিউ
                                     </h2>
-                                    <p className="mt-4 text-lg text-gray-600">
-                                        {details}
-                                    </p>
+                                    <p
+                                        dangerouslySetInnerHTML={{
+                                            __html: details,
+                                        }}
+                                        className="mt-4 text-lg text-gray-600"
+                                    ></p>
                                 </div>
                             )}
 

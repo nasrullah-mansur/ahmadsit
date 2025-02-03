@@ -4,31 +4,26 @@ export default function Counter() {
     const items = [
         {
             id: 1,
-            title: "২০০+ ছাত্র",
+            title: "200+ ছাত্র",
             img: `${domain}/images/student.png`,
             color: "bg-[#BB0AF9]",
         },
-        {
-            id: 2,
-            title: "২০০+ চাকরি",
-            img: `${domain}/images/job.png`,
-            color: "bg-[#0034E0]",
-        },
+
         {
             id: 3,
-            title: "১০০+ ব্যাচ",
+            title: "6+ ব্যাচ",
             img: `${domain}/images/cap.png`,
             color: "bg-[#D300A6]",
         },
         {
             id: 4,
-            title: "৯৫% সাফল্য",
+            title: "95% সাফল্য",
             img: `${domain}/images/success.png`,
             color: "bg-[#CC9600]",
         },
         {
             id: 5,
-            title: "১৮+শিক্ষক",
+            title: "7+ শিক্ষক",
             img: `${domain}/images/teacher.png`,
             color: "bg-[#8D02CF]",
         },
@@ -36,7 +31,7 @@ export default function Counter() {
 
     return (
         <div className=" bg-[#F2F2F2] rounded-lg px-4 py-12 mt-[80px]">
-            <div className="max-w-screen-xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            <div className="max-w-screen-xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {items.map((item) => (
                     <div
                         key={item.id}

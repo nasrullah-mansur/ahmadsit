@@ -24,7 +24,7 @@ export default function PageBanner({ course }) {
                             {course.studentCount}+ শিক্ষার্থী
                         </p>
                     </div>
-                    <p className="mt-3">{course.details}</p>
+                    <p className="mt-3">{course.description}</p>
                     <div className="grid gap-3 mt-8 grid-cols-1 lg:grid-cols-2 items-center">
                         <div className="border rounded-sm text-center p-2">
                             <span className="block">কোর্স ফি</span>

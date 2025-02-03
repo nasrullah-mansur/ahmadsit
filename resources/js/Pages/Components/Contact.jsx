@@ -1,6 +1,7 @@
 import { MdOutlinePhoneInTalk } from "react-icons/md";
 import { MdOutlineAlternateEmail } from "react-icons/md";
 import { FaRegAddressBook } from "react-icons/fa";
+import ContactSection from "./ContactSection";
 
 export default function Contact() {
     return (
@@ -16,68 +17,7 @@ export default function Contact() {
                             referrerPolicy="no-referrer-when-downgrade"
                         ></iframe>
                     </div>
-                    <div>
-                        <h2 className="text-[36px] font-semibold mb-[15px]">
-                            আমাদের সাথে যোগাযোগ করুন
-                        </h2>
-                        <p className="text-[18px] mb-[30px]">
-                            Lorem Ipsum হল মুদ্রণ এবং টাইপসেটিং শিল্পের ডামি
-                            পাঠ্য। লোরেম ইপসাম 1500 এর দশক থেকে শিল্পের মানক
-                            ডামি টেক্সট হয়েছে, যখন একটি অজানা প্রিন্টার টাইপের
-                            একটি গ্যালি নিয়েছিল এবং একটি টাইপ নমুনা
-                        </p>
-                        <h3 className=" text-xl flex items-center mb-2">
-                            <FaRegAddressBook />
-                            <span className="font-semibold pl-2">ঠিকানা</span>
-                        </h3>
-                        <ul className="mb-5">
-                            <li className="mb-1">
-                                অপরুপা টাওয়ার, <br />
-                                ডগাইর বাজার, <br />
-                                সাইনবোর্ড, ডেমরা, ঢাকা
-                            </li>
-                        </ul>
-                        <h3 className=" text-xl flex items-center mb-2">
-                            <MdOutlinePhoneInTalk />{" "}
-                            <span className="font-semibold pl-2">
-                                মোবাইল নং
-                            </span>
-                        </h3>
-                        <ul className="mb-5">
-                            <li className="mb-1">
-                                <a href="tel:01700000000">
-                                    01700000000 (ওয়েব)
-                                </a>
-                            </li>
-                            <li className="mb-1">
-                                <a href="tel:01700000000">
-                                    01700000000 (গ্রাফিক্স এন্ড ভিডিও)
-                                </a>
-                            </li>
-                            <li className="mb-1">
-                                <a href="tel:01700000000">
-                                    01700000000 (ডিজিটাল মার্কেটিং)
-                                </a>
-                            </li>
-                            <li className="mb-1">
-                                <a href="tel:01700000000">
-                                    01700000000 (সার্বিক তথ্য)
-                                </a>
-                            </li>
-                        </ul>
-
-                        <h3 className=" text-xl flex items-center mb-2">
-                            <MdOutlineAlternateEmail />
-                            <span className="font-semibold pl-2">ইমেইল</span>
-                        </h3>
-                        <ul className="mb-5">
-                            <li className="mb-1">
-                                <a href="tel:01700000000">
-                                    nasrullah.cit.bd@gmail.com
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                    <ContactSection />
                 </div>
             </div>
         </div>

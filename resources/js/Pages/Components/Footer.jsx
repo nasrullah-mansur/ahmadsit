@@ -13,22 +13,31 @@ export default function Footer() {
                     <div className="mb-2 lg:mb-0">
                         <ul className="flex">
                             <li className="ml-[20px]">
-                                <Link href="#" className="text-[18px]">
+                                <Link href="/" className="text-[18px]">
                                     হোম
                                 </Link>
                             </li>
                             <li className="ml-[20px]">
-                                <Link href="#" className="text-[18px]">
-                                    কোর্স
+                                <Link
+                                    href={route("courses")}
+                                    className="text-[18px]"
+                                >
+                                    কোর্সসমুহ
                                 </Link>
                             </li>
                             <li className="ml-[20px]">
-                                <Link href="#" className="text-[18px]">
+                                <Link
+                                    href={route("about")}
+                                    className="text-[18px]"
+                                >
                                     আমাদের সম্পর্কে
                                 </Link>
                             </li>
                             <li className="ml-[20px]">
-                                <Link href="#" className="text-[18px]">
+                                <Link
+                                    href={route("contact")}
+                                    className="text-[18px]"
+                                >
                                     যোগাযোগ
                                 </Link>
                             </li>

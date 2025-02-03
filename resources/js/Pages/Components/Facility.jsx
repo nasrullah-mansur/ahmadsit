@@ -15,33 +15,32 @@ export default function Facility() {
         },
         {
             id: 3,
-            title: "২৪ ঘন্টা শিক্ষক সহায়তা",
+            title: "২৪ ঘন্টা আবাসিক শিক্ষক সহায়তা",
             img: `${domain}/images/teacher-2.png`,
             color: "bg-[#073E3E]",
         },
         {
             id: 4,
-            title: "২৪ ঘন্টা ওয়াইফাই সুবিধা",
+            title: "২৪ ঘন্টা ইন্টারনেট সুবিধা",
             img: `${domain}/images/wifi.png`,
             color: "bg-[#073E3E]",
         },
     ];
     return (
         <div className="bg-[#073E3E]">
-            <div className="container mx-auto rounded-lg px-24 py-12 mt-[80px]">
+            <div className="container mx-auto rounded-lg px-6 lg:px-24 py-12 mt-[80px]">
                 <div className="max-w-[860px] mx-auto text-center mb-[50px]">
                     <h2 className="text-[26px] lg:text-[36px] text-white font-semibold mb-[18px]">
                         আমাদের সুবিধা সমূহ
                     </h2>
                     <p className="text-white ">
-                        Lorem Ipsum হল মুদ্রণ এবং টাইপসেটিং শিল্পের ডামি পাঠ্য।
-                        লোরেম ইপসাম 1500 এর দশক থেকে শিল্পের মানক ডামি টেক্সট
-                        হয়েছে, যখন একটি অজানা প্রিন্টার টাইপের একটি গ্যালি
-                        নিয়েছিল এবং একটি টাইপ নমুনা বই তৈরি করতে এটিকে
-                        স্ক্র্যাম্বল করেছিল। এটা আছে
+                        আমাদের সুবিধার মধ্যে রয়েছে উন্নতমানের পরিষেবা, দ্রুত
+                        সাপোর্ট, ব্যবহারবান্ধব প্ল্যাটফর্ম, নিরাপত্তা ও
+                        নির্ভরযোগ্যতা, এবং প্রয়োজন অনুযায়ী কাস্টম সমাধান, যা
+                        আপনাকে সেরা অভিজ্ঞতা প্রদান করবে।
                     </p>
                 </div>
-                <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8 pb-8">
+                <div className="grid grid-cols-2 lg:grid-cols-4  gap-8 pb-8">
                     {items.map((item) => (
                         <div
                             key={item.id}
