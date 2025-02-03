@@ -1,4 +1,4 @@
-import { Link } from "@inertiajs/react";
+import { Link, useRemember } from "@inertiajs/react";
 import { useState } from "react";
 import { BsLayers } from "react-icons/bs";
 import { FaChevronRight } from "react-icons/fa";
@@ -7,7 +7,7 @@ import { IoClose } from "react-icons/io5";
 
 export default function DashboardNavbar({ className, onNavbarShow }) {
     const domain = window.location.origin;
-    const [menus, setMenus] = useState([
+    const [menus, setMenus] = useRemember([
         {
             id: 1,
             name: "Dashboard",
@@ -71,17 +71,15 @@ export default function DashboardNavbar({ className, onNavbarShow }) {
         },
     ]);
 
-    const handleMenuClick = (id) => {
-        const updatedMenus = menus.map((menu) => {
-            if (menu.id === id) {
-                menu.isActive = !menu.isActive;
-            } else {
-                menu.isActive = false;
-            }
-            return menu;
-        });
+    const handleMenuClick = (id, e) => {
+        e.stopPropagation();
 
-        setMenus(updatedMenus);
+        setMenus((prevMenus) =>
+            prevMenus.map((menu) => ({
+                ...menu,
+                isActive: menu.id === id ? !menu.isActive : false,
+            }))
+        );
     };
 
     return (
@@ -116,7 +114,9 @@ export default function DashboardNavbar({ className, onNavbarShow }) {
                                             menu.isActive &&
                                             "bg-blue-500 text-white dark:bg-blue-500 dark:text-white hover:text-white"
                                         } cursor-pointer  flex items-center hover:text-blue-500 text-lg py-2 px-4 dark:hover:text-white transition-all text-gray-600 dark:text-gray-200`}
-                                        onClick={() => handleMenuClick(menu.id)}
+                                        onClick={(e) =>
+                                            handleMenuClick(menu.id, e)
+                                        }
                                     >
                                         <BsLayers />{" "}
                                         <span className="block ml-3">
@@ -155,6 +155,7 @@ export default function DashboardNavbar({ className, onNavbarShow }) {
                             return (
                                 <li key={menu.id}>
                                     <Link
+                                        preserveState={true}
                                         href={menu.link}
                                         className={`cursor-pointer flex items-center hover:text-blue-500 text-lg py-2 px-4 dark:hover:text-blue-500 transition-all text-gray-600 dark:text-gray-200`}
                                     >

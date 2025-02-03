@@ -57,7 +57,7 @@ export default function CourseViewBody({ courseCurriculum, details }) {
                                             .map((item, index) => (
                                                 <li
                                                     key={index}
-                                                    className="flex items-center gap-2"
+                                                    className="flex items-center gap-2 mb-3"
                                                 >
                                                     <span className="rounded -mt-1 w-[12px] h-[12px] bg-gray-600 inline-block"></span>
                                                     <span className="block">

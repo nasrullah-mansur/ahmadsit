@@ -73,12 +73,18 @@ export default function Edit({ courses, success }) {
                             id="countries"
                             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         >
+                            <option value={null} selected>
+                                Select One
+                            </option>
                             {courses.map((course) => (
                                 <option key={course.id} value={course.id}>
                                     {course.title}
                                 </option>
                             ))}
                         </select>
+                        <small className="text-red-500 font-semibold ml-2">
+                            {errors.course_id}
+                        </small>
                     </div>
 
                     <button className="py-2 px-12 rounded-lg text-white flex justify-center items-center bg-green-600">

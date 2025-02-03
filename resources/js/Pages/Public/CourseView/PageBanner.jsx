@@ -7,7 +7,7 @@ export default function PageBanner({ course }) {
         <div className="px-5 max-w-screen-xl mx-auto">
             <div className="grid grid-col-1 lg:grid-cols-2 items-center gap-6 container mx-auto mt-[120px]">
                 <div className="order-2 lg:order-1">
-                    <h1 className="flex text-[26px] lg:text-[36px] font-bold items-center">
+                    <h1 className="flex text-[26px] lg:text-[34px] font-bold items-center">
                         <IoMdStarOutline className="-mt-2" />
                         <span className="ml-2">{course.title}</span>
                     </h1>
