@@ -16,8 +16,8 @@ export default function Edit({ courses, success }) {
 
     return (
         <AuthenticatedLayout>
-            <h1 className="text-3xl font-bold">Create Story</h1>
-            <div className="mt-[50px] p-4 bg-gray-100">
+            <h1 className="text-3xl font-bold dark:text-white">Create Story</h1>
+            <div className="mt-[50px] p-4 bg-gray-100 dark:bg-slate-900">
                 <form onSubmit={submit}>
                     <div>
                         <label
@@ -73,9 +73,7 @@ export default function Edit({ courses, success }) {
                             id="countries"
                             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         >
-                            <option value={null} selected>
-                                Select One
-                            </option>
+                            <option value={null}>Select One</option>
                             {courses.map((course) => (
                                 <option key={course.id} value={course.id}>
                                     {course.title}

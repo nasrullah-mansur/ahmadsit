@@ -18,8 +18,10 @@ export default function Edit({ teacher }) {
 
     return (
         <AuthenticatedLayout>
-            <h1 className="text-3xl font-bold">Create Teacher</h1>
-            <div className="mt-[50px] p-4 bg-gray-100">
+            <h1 className="text-3xl font-bold dark:text-white">
+                Create Teacher
+            </h1>
+            <div className="mt-[50px] p-4 bg-gray-100 dark:bg-slate-900">
                 <form onSubmit={submit}>
                     <div>
                         <label

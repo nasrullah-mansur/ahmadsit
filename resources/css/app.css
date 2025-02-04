@@ -8,3 +8,21 @@
         font-family: "Noto Sans Bengali", "serif";
     }
 }
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 8px; /* Width of scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #f3f4f6; /* Track color */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #94bbf9; /* Scrollbar handle */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #3056d4; /* Darker on hover */
+}

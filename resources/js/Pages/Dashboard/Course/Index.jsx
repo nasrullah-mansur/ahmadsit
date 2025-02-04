@@ -14,7 +14,7 @@ export default function Index({ courses }) {
 
     return (
         <AuthenticatedLayout>
-            <h1 className="text-3xl font-bold">All Course</h1>
+            <h1 className="text-3xl font-bold dark:text-white">All Course</h1>
             <div className="mt-[50px] p-4 bg-gray-100">
                 <div className="relative overflow-x-auto">
                     <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">

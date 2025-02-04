@@ -1,4 +1,4 @@
-import { Link, useRemember } from "@inertiajs/react";
+import { Link, usePage, useRemember } from "@inertiajs/react";
 import { useState } from "react";
 import { BsLayers } from "react-icons/bs";
 import { FaChevronRight } from "react-icons/fa";
@@ -7,7 +7,12 @@ import { IoClose } from "react-icons/io5";
 
 export default function DashboardNavbar({ className, onNavbarShow }) {
     const domain = window.location.origin;
-    const [menus, setMenus] = useRemember([
+    const { url } = usePage();
+
+    const checkRoute = (routeArr) =>
+        routeArr.some((item) => url == route(item).replace(domain, ""));
+
+    const [menus, setMenus] = useState([
         {
             id: 1,
             name: "Dashboard",
@@ -19,7 +24,7 @@ export default function DashboardNavbar({ className, onNavbarShow }) {
             id: 2,
             name: "Courses",
             link: "#",
-            isActive: false,
+            isActive: checkRoute(["course.index", "course.create"]),
             children: [
                 {
                     id: 1,
@@ -37,7 +42,10 @@ export default function DashboardNavbar({ className, onNavbarShow }) {
             id: 3,
             name: "Success Story",
             link: "#",
-            isActive: false,
+            isActive: checkRoute([
+                "success.story.index",
+                "success.story.create",
+            ]),
             children: [
                 {
                     id: 1,
@@ -55,7 +63,7 @@ export default function DashboardNavbar({ className, onNavbarShow }) {
             id: 4,
             name: "Our Teachers",
             link: "#",
-            isActive: false,
+            isActive: checkRoute(["teacher.index", "teacher.create"]),
             children: [
                 {
                     id: 1,
@@ -86,7 +94,7 @@ export default function DashboardNavbar({ className, onNavbarShow }) {
         <div
             className={`${
                 className && className
-            } min-h-screen absolute lg:translate-x-0 z-50 lg:relative w-64 bg-white dark:bg-[#242424] border-r dark:border-r-[#444]`}
+            } min-h-screen overflow-y-auto custom-scrollbar absolute lg:translate-x-0 z-50 lg:relative w-64 bg-white dark:bg-[#242424] border-r dark:border-r-[#444]`}
         >
             <div className="h-[60px] w-full border-b dark:border-b-[#444] flex justify-between items-center px-4">
                 <div className="flex w-full relative items-center">

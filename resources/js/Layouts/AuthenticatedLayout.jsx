@@ -35,7 +35,7 @@ export default function AuthenticatedLayout({ children }) {
                     <DashboardHeader
                         isNavbarShow={() => setIsNavbarShow(!isNavbarShow)}
                     />
-                    <div className="p-5 min-h-[calc(100vh-60px)]">
+                    <div className="p-5 dark:bg-[#151515] min-h-[calc(100vh-60px)]">
                         {children}
                     </div>
                 </div>

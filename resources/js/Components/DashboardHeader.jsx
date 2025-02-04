@@ -1,15 +1,17 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { MdOutlineLightMode } from "react-icons/md";
 import { AiOutlineFullscreen } from "react-icons/ai";
 import { AiOutlineFullscreenExit } from "react-icons/ai";
 import { MdLightMode } from "react-icons/md";
-import { Link } from "@inertiajs/react";
+import { Link, router } from "@inertiajs/react";
 
 export default function DashboardHeader({ isNavbarShow }) {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [isFullScreen, setIsFullScreen] = useState(false);
     const [isSearch, setIsSearch] = useState(false);
+
+    const dropdownRef = useRef(null);
 
     const [theme, setTheme] = useState(
         localStorage.getItem("theme") || "light"
@@ -34,8 +36,36 @@ export default function DashboardHeader({ isNavbarShow }) {
         setIsFullScreen(!isFullScreen);
     };
 
+    const handleLogout = (e) => {
+        console.log(e);
+
+        router.post(route("logout"));
+    };
+
+    const handleDropdown = (e) => {
+        e.stopPropagation();
+        console.log(e);
+
+        setIsDropdownOpen(!isDropdownOpen);
+        setIsDropdownOpen(!isDropdownOpen);
+    };
+
+    const handleClickOutside = (event) => {
+        if (
+            dropdownRef.current &&
+            !dropdownRef.current.contains(event.target)
+        ) {
+            setIsDropdownOpen(false);
+        }
+    };
+
+    useEffect(() => {
+        document.addEventListener("click", handleClickOutside);
+        return () => document.removeEventListener("click", handleClickOutside);
+    }, []);
+
     return (
-        <div>
+        <div ref={dropdownRef}>
             <div className="h-[60px] border-b dark:border-b-[#444] bg-white dark:bg-[#242424] flex items-center justify-between">
                 <div className="flex items-center justify-start h-full px-5">
                     <button
@@ -113,8 +143,7 @@ export default function DashboardHeader({ isNavbarShow }) {
                         data-dropdown-toggle="dropdownAvatar"
                         className="flex w-10 h-10 bg-red-300 border-0 text-sm rounded-full md:me-0 "
                         type="button"
-                        onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                        onBlur={() => setIsDropdownOpen(!isDropdownOpen)}
+                        onClick={(e) => handleDropdown(e)}
                     >
                         <span className="sr-only">Open user menu</span>
                         <img
@@ -124,16 +153,16 @@ export default function DashboardHeader({ isNavbarShow }) {
                         />
                     </button>
 
-                    {isDropdownOpen && <Dropdown />}
+                    {isDropdownOpen && <Dropdown onClick={handleLogout} />}
                 </div>
             </div>
         </div>
     );
 }
 
-function Dropdown() {
+function Dropdown({ onClick }) {
     return (
-        <div className="z-10 absolute right-5 top-full border bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700 dark:divide-gray-600">
+        <div className="z-10 absolute right-5 top-full border bg-white divide-y divide-gray-100 rounded-lg shadow-sm dark:bg-gray-700 dark:divide-gray-600">
             <ul
                 className="py-2 text-sm text-gray-700 dark:text-gray-200"
                 aria-labelledby="dropdownInformdropdownAvatarNameButtonationButton"
@@ -165,12 +194,12 @@ function Dropdown() {
                     </a>
                 </li>
                 <li>
-                    <Link
-                        href="#"
-                        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    <button
+                        onClick={(e) => onClick(e)}
+                        className="block text-left w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                     >
                         Sigh Out
-                    </Link>
+                    </button>
                 </li>
             </ul>
         </div>
