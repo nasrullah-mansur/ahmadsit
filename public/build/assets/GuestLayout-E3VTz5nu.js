@@ -1,1 +1,0 @@
-import{j as r}from"./app-Cd0xy1aV.js";import t from"./Footer-CvC-PGJp.js";import s from"./HeadSection-Dh2m09mn.js";import m from"./Navbar-CI0o89vX.js";function n({children:o}){return r.jsxs(r.Fragment,{children:[r.jsx(s,{}),r.jsx(m,{}),r.jsx("div",{className:"min-h-[calc(100vh-288px)]",children:o}),r.jsx(t,{})]})}export{n as G};

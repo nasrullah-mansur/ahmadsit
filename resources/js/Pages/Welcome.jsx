@@ -9,10 +9,10 @@ import Solution from "./Components/Solution";
 import Contact from "./Components/Contact";
 import HeadSection from "./Components/HeadSection";
 
-export default function Welcome({ courses, stories }) {
+export default function Welcome({ courses, stories, bannerSection }) {
     return (
         <GuestLayout>
-            <Banner />
+            <Banner bannerSection={bannerSection} />
             <Counter />
             <Course courses={courses} />
             <Facility />

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\BannerSection;
 use Inertia\Inertia;
 use App\Models\Course;
 use App\Models\Teacher;
@@ -12,9 +13,15 @@ class FrontEndController extends Controller
 {
     function index()
     {
+        $bannerSection = BannerSection::first();
         $stories = SuccessStory::all();
         $courses = Course::all();
-        return Inertia::render('Welcome', ['courses' => $courses, "stories" => $stories]);
+        
+        return Inertia::render('Welcome', [
+            'courses' => $courses, 
+            "stories" => $stories, 
+            "bannerSection" => $bannerSection
+        ]);
     }
 
     function about()

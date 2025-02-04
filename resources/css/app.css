@@ -9,6 +9,10 @@
     }
 }
 
+.banner-span-primary span {
+    color: #bb0af9;
+}
+
 /* Custom Scrollbar */
 .custom-scrollbar::-webkit-scrollbar {
     width: 8px; /* Width of scrollbar */

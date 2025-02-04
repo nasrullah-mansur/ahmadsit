@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Application;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\FrontEndController;
+use App\Http\Controllers\SectionController;
 use App\Http\Controllers\SuccessStoryController;
 use App\Http\Controllers\TeacherController;
 
@@ -49,6 +50,10 @@ Route::middleware('auth')->group(function () {
         Route::get('/teachers/edit/{id}', [TeacherController::class, 'edit'])->name('teacher.edit');
         Route::post('/teachers/update/{id}', [TeacherController::class, 'update'])->name('teacher.update');
         Route::get('/teachers/delete/{id}', [TeacherController::class, 'delete'])->name('teacher.delete');
+
+        // Sections;
+        Route::get('banner-section/edit', [SectionController::class, 'banner_edit'])->name('banner.edit');
+        Route::post('banner-section/update', [SectionController::class, 'banner_updated'])->name('banner.update');
     });
 });
 

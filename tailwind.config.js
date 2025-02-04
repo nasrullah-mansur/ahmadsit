@@ -10,6 +10,8 @@ export default {
         "./resources/views/**/*.blade.php",
         "./resources/js/**/*.jsx",
     ],
+    safelist: ["text-red-500"],
+    mode: "jit",
 
     theme: {
         extend: {

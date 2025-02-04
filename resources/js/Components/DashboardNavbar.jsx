@@ -77,6 +77,19 @@ export default function DashboardNavbar({ className, onNavbarShow }) {
                 },
             ],
         },
+        {
+            id: 5,
+            name: "Sections",
+            link: "#",
+            isActive: checkRoute(["banner.edit"]),
+            children: [
+                {
+                    id: 1,
+                    name: "Banner",
+                    link: route("banner.edit"),
+                },
+            ],
+        },
     ]);
 
     const handleMenuClick = (id, e) => {

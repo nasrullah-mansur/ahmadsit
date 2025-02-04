@@ -3,19 +3,25 @@ import { FaPlay } from "react-icons/fa";
 import PopupVideo from "./PopupVideo";
 import { useState } from "react";
 
-export default function Banner() {
+export default function Banner({ bannerSection }) {
     const [isOpen, setIsOpen] = useState(false);
     const domain = window.location.origin;
     return (
         <div
             className="pt-[90px] max-w-screen-xl mx-auto"
             style={{
-                backgroundImage: `url('${domain}/images/banner-bg.png')`,
+                backgroundImage: `url('${domain}/images/${
+                    bannerSection ? bannerSection.image : "banner-bg.png"
+                } ')`,
             }}
         >
             {isOpen && (
                 <PopupVideo
-                    videoLink="	https://www.youtube.com/embed/5TRoZSTCRwA?si=0L6mqIKossGS_aTu"
+                    videoLink={
+                        bannerSection
+                            ? bannerSection.iframe
+                            : "https://www.youtube.com/embed/5TRoZSTCRwA?si=0L6mqIKossGS_aTu"
+                    }
                     isOpen={() => setIsOpen(!isOpen)}
                 />
             )}
@@ -28,15 +34,20 @@ export default function Banner() {
                                 alt="stars"
                             />
                             <span className="ml-3 text-md lg:text-xl font-semibold">
-                                স্বাগতম! আপনাকে পেয়ে আমরা আনন্দিত
+                                {bannerSection
+                                    ? bannerSection.subtitle
+                                    : "স্বাগতম! আপনাকে পেয়ে আমরা আনন্দিত"}
                             </span>
                         </div>
-                        <h1 className="text-[26px] lg:text-[36px] font-bold">
-                            আপনাকে দক্ষ করতে আপনার পাশে{" "}
-                            <span className="text-primary">
-                                আহমাদ’স আইটি ইনিস্টিটিউট
-                            </span>
-                        </h1>
+
+                        <h1
+                            dangerouslySetInnerHTML={{
+                                __html: bannerSection
+                                    ? bannerSection.title
+                                    : "আপনাকে দক্ষ করতে আপনার পাশে আহমাদ’স আইটি ইনিস্টিটিউট",
+                            }}
+                            className="text-[26px] lg:text-[36px] font-bold banner-span-primary"
+                        ></h1>
                         <p className="text-[#3D3D3D]">
                             আহমাদ’স আইটি ইনিস্টিটিউট আপনার ক্যারিয়ার গড়ার
                             নির্ভরযোগ্য ঠিকানা! আমরা শেখাই ওয়েব ডেভেলপমেন্ট,
@@ -57,7 +68,11 @@ export default function Banner() {
                                 <div>
                                     <img
                                         className="rounded-lg"
-                                        src={`${domain}/images/banner-img.jpg`}
+                                        src={`${domain}/uploads/${
+                                            bannerSection
+                                                ? bannerSection.image
+                                                : "banner-img.jpg"
+                                        }`}
                                         alt="Ahmad's IT Institute"
                                     />
                                     <div
