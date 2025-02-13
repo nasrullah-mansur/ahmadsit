@@ -1,6 +1,7 @@
 import { Link } from "@inertiajs/react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { FaChevronRight } from "react-icons/fa6";
+import EnrollBtn from "./EnrollBtn";
 
 export default function Course({ courses }) {
     const domain = window.location.origin;

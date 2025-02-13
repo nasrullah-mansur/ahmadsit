@@ -7,6 +7,7 @@ use Illuminate\Foundation\Application;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\FrontEndController;
 use App\Http\Controllers\SectionController;
+use App\Http\Controllers\StudentController;
 use App\Http\Controllers\SuccessStoryController;
 use App\Http\Controllers\TeacherController;
 
@@ -16,6 +17,9 @@ Route::get('/contact', [FrontEndController::class, 'contact'])->name('contact');
 Route::get('/success', [FrontEndController::class, 'success'])->name('success');
 Route::get('/courses', [FrontEndController::class, 'courses'])->name('courses');
 Route::get('/courses/{slug}', [FrontEndController::class, 'courses_view'])->name('courses.view');
+
+// Enrollment;
+Route::get('/enroll', [StudentController::class, 'enroll'])->name('enroll');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
@@ -54,6 +58,8 @@ Route::middleware('auth')->group(function () {
         // Sections;
         Route::get('banner-section/edit', [SectionController::class, 'banner_edit'])->name('banner.edit');
         Route::post('banner-section/update', [SectionController::class, 'banner_updated'])->name('banner.update');
+
+        Route::get('students', [StudentController::class, 'all_student'])->name('all.student');
     });
 });
 

@@ -30,3 +30,7 @@
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
     background: #3056d4; /* Darker on hover */
 }
+
+.react-select__option {
+    color: black;
+}

@@ -2,6 +2,7 @@ import CourseBtn from "./CourseBtn";
 import { FaPlay } from "react-icons/fa";
 import PopupVideo from "./PopupVideo";
 import { useState } from "react";
+import EnrollBtn from "./EnrollBtn";
 
 export default function Banner({ bannerSection }) {
     const [isOpen, setIsOpen] = useState(false);
@@ -55,7 +56,10 @@ export default function Banner({ bannerSection }) {
                             আপনাকে দক্ষ করে তুলবে ফ্রিল্যান্সিং ও চাকরির বাজারে।
                             আজই যোগ দিন এবং দক্ষতা অর্জন করুন!
                         </p>
-                        <CourseBtn className="mt-6" />
+                        <div className="space-y-3 md:space-y-0 ">
+                            <CourseBtn className="mt-6 mr-3" />
+                            <EnrollBtn />
+                        </div>
                     </div>
                     <div className="lg:py-10">
                         <div

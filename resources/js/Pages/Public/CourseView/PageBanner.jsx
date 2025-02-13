@@ -1,3 +1,5 @@
+import EnrollBtn from "@/Pages/Components/EnrollBtn";
+import { Link } from "@inertiajs/react";
 import { IoMdStarOutline } from "react-icons/io";
 import { MdOutlineStar } from "react-icons/md";
 
@@ -51,9 +53,7 @@ export default function PageBanner({ course }) {
                             </span>
                         </div>
                     </div>
-                    <p className="bg-gradient-to-r from-purple-500 to-pink-500 font-semibold px-5 py-3 rounded mt-5 text-center text-white">
-                        ভর্তির জন্য যোগাযোগ : {course.phone}
-                    </p>
+                    <EnrollBtn className="w-full mt-[10px] flex justify-center items-center" />
                 </div>
 
                 <div className="lg:py-0 order-1 lg:order-2 mb-5 lg:mb-0">
