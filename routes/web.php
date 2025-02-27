@@ -1,15 +1,17 @@
 <?php
 
-use App\Http\Controllers\CourseController;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Application;
+use App\Http\Controllers\PDFController;
+use App\Http\Controllers\CourseController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\FrontEndController;
 use App\Http\Controllers\SectionController;
 use App\Http\Controllers\StudentController;
-use App\Http\Controllers\SuccessStoryController;
 use App\Http\Controllers\TeacherController;
+use App\Http\Controllers\FrontEndController;
+use App\Http\Controllers\SuccessStoryController;
+use App\Http\Controllers\SslCommerzPaymentController;
 
 Route::get('/', [FrontEndController::class, 'index'])->name('home');
 Route::get('/about', [FrontEndController::class, 'about'])->name('about');
@@ -60,7 +62,28 @@ Route::middleware('auth')->group(function () {
         Route::post('banner-section/update', [SectionController::class, 'banner_updated'])->name('banner.update');
 
         Route::get('students', [StudentController::class, 'all_student'])->name('all.student');
+        Route::get('students/delete/{id}', [StudentController::class, 'delete'])->name('student.delete');
     });
 });
 
 require __DIR__.'/auth.php';
+
+
+
+// SSLCOMMERZ Start
+// Route::get('/example1', [SslCommerzPaymentController::class, 'exampleEasyCheckout']);
+// Route::get('/example2', [SslCommerzPaymentController::class, 'exampleHostedCheckout']);
+
+Route::post('/pay', [SslCommerzPaymentController::class, 'index']);
+Route::post('/pay-via-ajax', [SslCommerzPaymentController::class, 'payViaAjax']);
+
+Route::post('/success', [SslCommerzPaymentController::class, 'success']);
+Route::post('/fail', [SslCommerzPaymentController::class, 'fail']);
+Route::post('/cancel', [SslCommerzPaymentController::class, 'cancel']);
+
+Route::post('/ipn', [SslCommerzPaymentController::class, 'ipn']);
+//SSLCOMMERZ END
+
+// PDF;
+Route::get('/pdf/{id}', [PDFController::class, 'vorti_pdf'])->name('pdf.vorti');
+

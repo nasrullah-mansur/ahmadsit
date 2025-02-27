@@ -21,6 +21,13 @@ export default function DashboardNavbar({ className, onNavbarShow }) {
             isActive: false,
         },
         {
+            id: 6,
+            name: "Students",
+            link: route("all.student"),
+            children: [],
+            isActive: false,
+        },
+        {
             id: 2,
             name: "Courses",
             link: "#",
